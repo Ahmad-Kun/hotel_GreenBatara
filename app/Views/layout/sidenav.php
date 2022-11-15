@@ -24,7 +24,6 @@
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="/dashboardKonsumen/"><i class="far fa-window-maximize"></i><span><span style="font-weight: normal !important;">Dashboard</span></span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="/reservasi_konsumen/"><i class="fas fa-calendar-alt"></i><span><span style="font-weight: normal !important;">Reservasi</span></span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/konsultasiKonsumen/<?= session()->get('ses_email')?>"><i class="fas fa-calendar-alt"></i><span><span style="font-weight: normal !important;">Konsultasi</span></span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="/profil/<?= session()->get('ses_email')?>"><i class="far fa-user"></i><span><span style="font-weight: normal !important;">Profil</span></span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="/feedback/"><i class="fas fa-exchange-alt"></i><span><span style="font-weight: normal !important;">Feedback</span></span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="/logout/"><i class="fas fa-power-off"></i><span><span style="font-weight: normal !important;">Logout</span></span></a></li>
