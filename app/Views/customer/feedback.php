@@ -1,5 +1,5 @@
-<?= $this->extend('layout/sidenav'); ?>
-<?= $this->section('admin'); ?>   
+<?= $this->extend('layout/sidenav_konsumen'); ?>
+<?= $this->section('konsumen'); ?>   
 <section class="py-5">
     <div class="container">
         <div class="row mb-5">

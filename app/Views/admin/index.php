@@ -27,18 +27,11 @@
                                         <h4 class="text-dark mb-4"><strong>Selamat Datang!</strong></h4>
                                     </div>
                                     <form class="user" action="/auth" method="POST">
-                                        <div class="mb-3"><input class="form-control form-control-user" type="text" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="username" required autofocus></div>
+                                        <div class="mb-3"><input class="form-control form-control-user" type="text" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username..." name="username" required autofocus></div>
                                         <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="pass_admin" required autofocus></div>
                                         <div class="mb-3">
-                                            <div class="custom-control custom-checkbox small">
-                                                <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1">Remember Me</label></div>
-                                            </div>
                                         </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Masuk</button>
-                                        <hr>
-                                        <hr>
                                     </form>
-                                    <div class="text-center"><a class="small" href="forgot-password.html">Lupa Password?</a></div>
-                                    <div class="text-center"><a class="small" href="register.html">Belum akun? Daftar sekarang!</a></div>
                                 </div>
                             </div>
                         </div>

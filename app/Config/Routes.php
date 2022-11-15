@@ -46,6 +46,7 @@ $routes->post('/auth', 'Admin::auth');
 $routes->post('/auth_konsumen', 'Konsumen::auth');
 $routes->get('/forgot_password', 'Konsumen::forgot_passsword');
 $routes->get('/reservasi', 'Admin::reservasi');
+$routes->get('/list_feedback', 'Admin::list_feedback');
 $routes->get('/reservasi_konsumen', 'Konsumen::reservasi');
 $routes->get('/logout', 'Pages::logout');
 $routes->get('/profil/(:any)', 'Konsumen::profil/$1');
