@@ -1,5 +1,5 @@
-<?= $this->extend('layout/sidenav'); ?>
-<?= $this->section('admin'); ?>   
+<?= $this->extend('layout/sidenav_konsumen'); ?>
+<?= $this->section('konsumen'); ?>   
 <div class="container-fluid">
     <h3 class="text-dark mb-4">Profil</h3>
     <div class="row mb-3">
