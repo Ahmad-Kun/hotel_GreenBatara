@@ -115,32 +115,33 @@ class Konsumen extends BaseController
     public function savereservasi()
     {
         $dataModel = new databaseModel();
-
         $count = $this->request->getPost('count');
         $tipe = $this->request->getPost('tipe');
 
         $harga = 0;
 
-        if($this->request->getPost('tipe')=="Studio") $harga = 400000;
-        else if ($this->request->getPost('tipe')=="Studio II")  $harga = 500000;
-        else if ($this->request->getPost('tipe')=="Suite") $harga = 750000;
+        if($tipe=="Studio") $harga = 400000;
+        else if ($tipe=="Studio II")  $harga = 500000;
+        else if ($tipe=="Suite") $harga = 750000;
         else $harga = 11000000;
 
         $hargaTotal = $harga * $count;
 
         $data = [
             'nama' => $this->request->getPost('nama'),
-            'telp' => $this->request->getPost('telp'),
-            'tipe' => $this->request->getPost('tipe'),
+            'tipe' => $tipe,
             'cin' => $this->request->getPost('tgl_cin'),
             'cout' => $this->request->getPost('tgl_cin')."INTERVAL $count DAY",
+            'telp' => $this->request->getPost('telp'),  
             'status' => '-',
             'rating' => '-',
             'layanan' => '-',
-            'total_tagihan' => $hargaTotal
+            'total_tagihan' => $hargaTotal,
+            'email' => $this->session->ses_email
         ];
 
         $dataModel->insert($data);
-        return view('customer/reservasi.php');
+        $temp['customer'] = $this->database->where('email', $this->session->ses_email)->findAll();
+        return view('customer/reservasi.php', $temp);
     }
 }

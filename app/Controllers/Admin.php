@@ -38,4 +38,9 @@ class Admin extends BaseController
         $data['customer'] = $this->customer->findAll();
         return view('admin/checkin.php', $data);
     }
+
+    public function list_feedback()
+    {
+        return view('admin/list_feedback.php');
+    }
 }
