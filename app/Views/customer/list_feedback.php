@@ -1,5 +1,5 @@
-<?= $this->extend('layout/sidenav'); ?>
-<?= $this->section('admin'); ?>
+<?= $this->extend('layout/sidenav_konsumen'); ?>
+<?= $this->section('konsumen'); ?>
 <div class="container-fluid">
     <link rel="stylesheet" href="cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <div class="page-title">
@@ -48,6 +48,8 @@
                                             <td><?= $k['cin'] ?></td>
                                             <td><?= $k['cout'] ?></td>
                                             <td>Sangat Baik</td>
+                                            <td>
+                                                <a href="/edit_feedback" class="btn btn-primary btn-sm">Edit Feedback</a>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

@@ -82,6 +82,11 @@ class Konsumen extends BaseController
     }
     public function feedback()
     {
+        $data['customer'] = $this->database->where('email', $this->session->ses_email)->findAll();
+        return view('customer/list_feedback.php', $data);
+    }
+    public function edit_feedback()
+    {
         return view('customer/feedback.php');
     }
     public function editprofil($id)
@@ -143,5 +148,13 @@ class Konsumen extends BaseController
         $dataModel->insert($data);
         $temp['customer'] = $this->database->where('email', $this->session->ses_email)->findAll();
         return view('customer/reservasi.php', $temp);
+    }
+
+    public function checkOut($id)
+    {
+        $data = [
+            'status' => 'Checked-Out',
+        ];
+        $this->database->update($id, $data);
     }
 }
