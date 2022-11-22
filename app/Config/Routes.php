@@ -58,6 +58,7 @@ $routes->get('/createreservasi', 'Konsumen::createreservasi');
 $routes->post('/savereservasi', 'Konsumen::savereservasi');
 $routes->get('/feedback', 'Konsumen::feedback');
 $routes->get('/edit_feedback', 'Konsumen::edit_feedback');
+$routes->get('/editprofil/(:any)', 'Konsumen::editprofil/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
