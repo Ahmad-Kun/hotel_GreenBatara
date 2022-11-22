@@ -1,7 +1,7 @@
 <?= $this->extend('layout/sidenav_konsumen'); ?>
 <?= $this->section('konsumen'); ?>
 <div class="container-fluid">
-    <link rel="stylesheet" href="cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <div class="page-title">
         <div class="row">
             <div class="d-sm-flex justify-content-between align-items-center mb-4">
@@ -26,7 +26,7 @@
                         </div>
                         <!-- table head dark -->
                         <div class="table-responsive">
-                            <table class="table mb-0" id="mytable">
+                            <table class="table mb-0" id="mydatatable">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th>No</th>
@@ -61,9 +61,12 @@
         </div>
     </section>
 </div>
-<script src="cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js">
-    $(document).ready(function() {
-        $('#mytable').DataTable();
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#mydatatable').DataTable({
+        });
     });
 </script>
 <?= $this->endSection(); ?>
